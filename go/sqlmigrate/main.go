@@ -20,6 +20,8 @@ func main() {
 		Dir: "migrations",
 	}
 
+	migrate.SetTable("migrations")
+
 	n, err := migrate.Exec(db.DB, "postgres", migrations, migrate.Up)
 
 	if err != nil {
