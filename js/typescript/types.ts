@@ -27,7 +27,6 @@ var notSure : any = 4;
 notSure = false;
 
 //Void
-
 function warnUser() :void {
 	console.log("Bugaga");
 }	

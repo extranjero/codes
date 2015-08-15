@@ -63,3 +63,42 @@ mySearch = function(src: string, sub: string){
 
 console.log(mySearch("i have sub and more", "sub"));
 
+
+//Interface array types
+interface StringArray {
+	[index: number]: string;
+}
+
+var myArray: StringArray;
+myArray = ["bob", "fred"];
+
+console.log(myArray)
+
+//Interface Class types
+interface ClockInterface {
+	currentTime: Date;
+	setTime(d: Date);
+}
+
+class Clock implements ClockInterface {
+	currentTime: Date;
+	setTime(d: Date) {
+		this.currentTime = d;
+	}
+	constructor(h: number, m:number){}
+}
+
+//Extending interfaces
+interface Shape {
+	color: string;
+}
+
+interface Square extends Shape {
+	sideLength: number;
+}
+
+var square = <Square>{};
+square.color = "blue";
+square.sideLength = 10;
+
+
