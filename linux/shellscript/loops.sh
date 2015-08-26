@@ -3,7 +3,6 @@ do
 	echo "welcome $i times"
 done
 
-
 for (( i = 5; i != 0; i-- ))
 do 
 	echo "welcome $i times"
